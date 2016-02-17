@@ -1,0 +1,33 @@
+{
+  "browser_action": {
+    "default_title": "Chrome Dev Tools Remote Control",
+    "default_icon": {
+      "19": "images/icon-19x19.png",
+      "38": "images/icon-38x38.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://chrome-dev-tools-remote-control.tdg5.com/*"],
+      "js": [ "js/chrome-dev-tools-remote-control.js" ],
+      "run_at": "document_start"
+    }
+  ],
+  "description": "JavaScript library empowering client-side code to control Chrome dev tools remotely.",
+  "icons": {
+    "16": "images/icon-16x16.png",
+    "48": "images/icon-48x48.png",
+    "128": "images/icon-128x128.png"
+  },
+  "manifest_version": 2,
+  "name": "chrome-dev-tools-remote-control",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "http://chrome-dev-tools-remote-control.tdg5.com/"
+  ],
+  "version": "0.1.0",
+  "web_accessible_resources": [
+    "js/chrome-dev-tools-remote-control.js"
+  ]
+}
